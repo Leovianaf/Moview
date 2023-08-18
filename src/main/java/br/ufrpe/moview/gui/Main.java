@@ -21,7 +21,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TelaInicial.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TelaCadastro.fxml")));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("style/style.css").toExternalForm());
             stage.setScene(scene);

@@ -7,17 +7,20 @@ import br.ufrpe.moview.negocio.ControladorUsuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 
 public class TelaCadastroController {
     // Atributos elementos gráficos
     @FXML private TextField txtNome;
-    @FXML private TextField txtSenha;
     @FXML private TextField txtLogin;
-    @FXML private Button btnVoltar;
+    @FXML private PasswordField txtSenha;
     @FXML private Button btnCadastro;
+    @FXML private ImageView imagemFilme;
+    @FXML private ImageView imagemEstrelas;
 
     ControladorCenas controladorCenas = ControladorCenas.getInstance();
 
@@ -33,10 +36,5 @@ public class TelaCadastroController {
 
         // Confirmar Cadastro
         controladorCenas.TrocarTelaCadastroRealizado(event);
-    }
-
-    // Ir para Tela Inicial
-    public void TelaInicial(ActionEvent event) throws IOException {
-        controladorCenas.TrocarTelaInicial(event);
     }
 }

@@ -6,9 +6,16 @@
 	-fx-background-color: #f8f8f8;
 }
 
-#bgColorido{
-	-fx-background-color: #E48D11;
-	-fx-background-radius: 15;
+.bg-colorido{
+	-fx-background-color: #1E1ABF;
+}
+
+.btn-default{
+	-fx-background-color: #120F8D;
+	-fx-color: rgba(1,1,1,0.8);
+	-fx-font-family: "Lucida Sans Unicode";
+	-fx-font-size: 14;
+	-fx-background-radius: 10;
 }
 
 .transparent{
@@ -37,29 +44,15 @@
 	-fx-background-radius: 10;
 }
 
-.btn-fechar{
-	-fx-background-color: rgb(60, 60, 60);
-	-fx-background-radius: 10;
-}
-
-.btn-fechar:hover{
-	-fx-background-color: rgb(50,50,50);
-}
-
-.btn-fechar:pressed{
-	-fx-background-color: rgb(35,35,35);
-}
-
-.btn-entrar{
-	-fx-background-color: #008dd8;
-	-fx-color: rgba(1,1,1,0.8);
-	-fx-background-radius: 10;
+.label-texto{
+	-fx-font-family: "Lucida Sans Unicode";
+	-fx-font-size: 22;
 }
 
 .btn-entrar:hover{
-	-fx-background-color: #0e60d7;
+	-fx-background-color: #7412D4;
 }
 
 .btn-entrar:pressed{
-	-fx-background-color: #2710f2;
+	-fx-background-color: #500D92;
 }
