@@ -18,6 +18,17 @@
 	-fx-background-radius: 10;
 }
 
+.label-texto{
+	-fx-font-family: "Lucida Sans Unicode";
+	-fx-font-size: 22;
+}
+
+.label-erro{
+	-fx-font-family: "Lucida Sans Unicode";
+	-fx-font-size: 16;
+	-fx-fill: red;
+}
+
 .transparent{
 	-fx-background-color: rgba(0,0,0,0);
 }
@@ -42,11 +53,6 @@
 	-fx-background-color: rgb(85, 255, 127);
 	-fx-color: #ffffff;
 	-fx-background-radius: 10;
-}
-
-.label-texto{
-	-fx-font-family: "Lucida Sans Unicode";
-	-fx-font-size: 22;
 }
 
 .btn-entrar:hover{

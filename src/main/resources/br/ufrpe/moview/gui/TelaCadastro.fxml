@@ -86,5 +86,10 @@
             <Font name="Lucida Sans Unicode" size="14.0" />
          </font>
       </Button>
+      <Label fx:id="lblErro" alignment="CENTER" layoutX="450.0" layoutY="185.0" prefHeight="50.0" prefWidth="350.0" styleClass="label-erro" stylesheets="@style/style.css" textFill="RED">
+         <font>
+            <Font name="Lucida Sans Unicode" size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

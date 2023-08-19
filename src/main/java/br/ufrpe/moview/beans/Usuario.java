@@ -1,5 +1,6 @@
 package br.ufrpe.moview.beans;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario {
@@ -16,6 +17,7 @@ public class Usuario {
         this.login = login;
         this.senha = senha;
         this.tipo = TipoDeConta.PADRAO;
+        this.listas = new ArrayList<>();
     }
 
     // Getters e Setters
