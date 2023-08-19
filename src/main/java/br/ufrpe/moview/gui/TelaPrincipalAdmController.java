@@ -42,7 +42,7 @@ public class TelaPrincipalAdmController {
     // Volta pra Tela de Inicial, Deslogando da sessão
     public void Logoff(ActionEvent event) throws IOException {
         sessao.encerrarSessao();
-        controladorCenas.TrocarTelaInicial(event);
+        controladorCenas.TrocarTelaLogin(event);
     }
 
     // Ir para Tela de Pesquisar Filmes

@@ -11,7 +11,7 @@ import java.io.IOException;
 public class TelaPrincipalController {
     @FXML private Button btnPerfil;
     @FXML private Button btnListas;
-    @FXML private Button btnVoltar;
+    @FXML private Button btnLogoff;
     @FXML private Button btnPesquisaFilme;
     @FXML private Button btnPesquisaUsuario;
 
@@ -32,10 +32,10 @@ public class TelaPrincipalController {
         controladorCenas.TrocarTelaPerfil(event);
     }
 
-    // Volta pra Tela de Inicial, Deslogando da sessão
+    // Volta pra Tela de Login, Deslogando da sessão
     public void Logoff(ActionEvent event) throws IOException {
         sessao.encerrarSessao();
-        controladorCenas.TrocarTelaInicial(event);
+        controladorCenas.TrocarTelaLogin(event);
     }
 
     public void PesquisaFilme(ActionEvent event)throws IOException, ObjetoInvalidoException {

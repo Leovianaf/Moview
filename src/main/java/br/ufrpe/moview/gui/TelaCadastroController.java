@@ -21,12 +21,14 @@ public class TelaCadastroController {
     @FXML private TextField txtLogin;
     @FXML private PasswordField txtSenha;
     @FXML private Button btnCadastro;
+    @FXML private Button btnLogin;
     @FXML private ImageView imagemFilme;
     @FXML private ImageView imagemEstrelas;
     @FXML private Label lblErro;
 
     ControladorCenas controladorCenas = ControladorCenas.getInstance();
 
+    // Limpa o label de erro
     public void initialize() {
         // Configurar ouvintes de foco para cada campo
         txtNome.focusedProperty().addListener((observable, oldValue, newValue) -> {
@@ -57,6 +59,7 @@ public class TelaCadastroController {
             String login = txtLogin.getText();
             String senha = txtSenha.getText();
 
+            // Verifica se os Campos da Interface estão vazios
             if (nome.isEmpty() || login.isEmpty() || senha.isEmpty()) {
                 throw new CamposNaoPreenchidosException("Por favor, preencha todos os campos.");
             }
@@ -71,5 +74,10 @@ public class TelaCadastroController {
         } catch (IOException | ObjetoJaExisteException | ObjetoInvalidoException e) {
             // Tratar outras exceções aqui, se necessário
         }
+    }
+
+    // Ir para Login
+    public void irTelaLogin(ActionEvent event) throws IOException {
+        controladorCenas.TrocarTelaLogin(event);
     }
 }

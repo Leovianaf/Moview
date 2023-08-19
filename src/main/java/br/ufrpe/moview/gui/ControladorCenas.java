@@ -17,15 +17,6 @@ public class ControladorCenas {
     private static ControladorCenas instance;
 
 
-    public void TrocarTelaInicial(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("TelaInicial.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("style/style.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
-    }
-
     public void TrocarTelaCadastro(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("TelaCadastro.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

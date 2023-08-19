@@ -23,6 +23,11 @@
 	-fx-font-size: 22;
 }
 
+.label-textoMenor{
+	-fx-font-family: "Lucida Sans Unicode";
+	-fx-font-size: 18;
+}
+
 .label-erro{
 	-fx-font-family: "Lucida Sans Unicode";
 	-fx-font-size: 16;
