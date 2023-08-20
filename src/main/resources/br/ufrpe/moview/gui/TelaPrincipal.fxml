@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
@@ -63,26 +64,41 @@
          <font>
             <Font name="Lucida Sans Unicode" size="14.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="btnPesquisaFilme" layoutX="179.0" layoutY="250.0" mnemonicParsing="false" onAction="#PesquisaFilme" prefHeight="50.0" prefWidth="170.0" styleClass="btn-default" stylesheets="@style/style.css" text="Pesquisa de Filme">
          <font>
             <Font name="Lucida Sans Unicode" size="14.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="btnPesquisaUsuario" layoutX="526.0" layoutY="250.0" mnemonicParsing="false" onAction="#PesquisaUsuario" prefHeight="50.0" prefWidth="170.0" styleClass="btn-default" stylesheets="@style/style.css" text="Pesquisa de Usuário">
          <font>
             <Font name="Lucida Sans Unicode" size="14.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="btnPerfil" layoutX="189.0" layoutY="349.0" mnemonicParsing="false" onAction="#TrocarTelaPerfil" prefHeight="50.0" prefWidth="150.0" styleClass="btn-default" stylesheets="@style/style.css" text="Meu Perfil">
          <font>
             <Font name="Lucida Sans Unicode" size="14.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="btnListas" layoutX="536.0" layoutY="349.0" mnemonicParsing="false" onAction="#TrocarTelaListas" prefHeight="50.0" prefWidth="150.0" styleClass="btn-default" stylesheets="@style/style.css" text="Minhas Listas">
          <font>
             <Font name="Lucida Sans Unicode" size="14.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <ImageView fitHeight="50.0" fitWidth="90.0" layoutX="79.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
          <image>

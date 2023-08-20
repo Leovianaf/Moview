@@ -31,7 +31,7 @@ public class ControladorFilme {
     // CRUD
     public void adicionarFilme(Filme filme) throws ObjetoInvalidoException, ObjetoJaExisteException {
         if (filme != null){
-            if(!filme.getNome().isEmpty() && filme.getGenero() != null && !filme.getSinopse().isEmpty() && filme.getDataDeLancamento() != null &&  filme.getNotaCriticos() != 0 && filme.getNotaPublico() != 0){
+            if(!filme.getNome().isEmpty() && filme.getGenero() != null && !filme.getSinopse().isEmpty() && filme.getDataDeLancamento() != null){
                 repositorioFilmes.adicionar(filme);
             }
         }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.moview.gui.">
+   <children>
+      <Label layoutX="98.0" layoutY="32.0" prefHeight="49.0" prefWidth="228.0" text="Adicionar Novo Filme">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="114.0" prefHeight="25.0" prefWidth="55.0" text="Nome:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNome" layoutX="140.0" layoutY="114.0" prefHeight="25.0" prefWidth="260.0" />
+      <Label layoutX="71.0" layoutY="148.0" text="Gênero:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtGenero" layoutX="140.0" layoutY="146.0" prefHeight="25.0" prefWidth="260.0" />
+      <Label layoutX="71.0" layoutY="188.0" text="Sinopse:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSinopse" layoutX="140.0" layoutY="188.0" prefHeight="90.0" prefWidth="260.0" />
+      <Label layoutX="80.0" layoutY="296.0" text="Data:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dataSelect" layoutX="140.0" layoutY="294.0" />
+      <Button fx:id="btnAdicionar" layoutX="307.0" layoutY="368.0" mnemonicParsing="false" onAction="#AdicionarNovoFilme" prefHeight="30.0" prefWidth="93.0" text="Adicionar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVoltar" layoutX="25.0" layoutY="368.0" mnemonicParsing="false" onAction="#TrocarTelaPrincipalAdm" prefHeight="30.0" prefWidth="93.0" text="Voltar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

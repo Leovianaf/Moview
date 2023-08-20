@@ -22,6 +22,12 @@ public class TelaPrincipalController {
     private void initialize() {
     }
 
+    // Volta pra Tela de Login, Deslogando da sessão
+    public void Logoff(ActionEvent event) throws IOException {
+        sessao.encerrarSessao();
+        controladorCenas.TrocarTelaLogin(event);
+    }
+
     // Ir para a tela de Minhas Listas
     public void TrocarTelaListas(ActionEvent event) throws IOException {
         controladorCenas.TrocarTelaListas(event);
@@ -30,12 +36,6 @@ public class TelaPrincipalController {
     // Ir para Tela de Meu Perfil
     public void TrocarTelaPerfil(ActionEvent event) throws IOException {
         controladorCenas.TrocarTelaPerfil(event);
-    }
-
-    // Volta pra Tela de Login, Deslogando da sessão
-    public void Logoff(ActionEvent event) throws IOException {
-        sessao.encerrarSessao();
-        controladorCenas.TrocarTelaLogin(event);
     }
 
     public void PesquisaFilme(ActionEvent event)throws IOException, ObjetoInvalidoException {
