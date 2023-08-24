@@ -1,6 +1,7 @@
 package br.ufrpe.moview.gui;
 
 import br.ufrpe.moview.beans.Filme;
+import br.ufrpe.moview.beans.TipoDeConta;
 import br.ufrpe.moview.exception.ObjetoInvalidoException;
 import br.ufrpe.moview.negocio.ControladorFilme;
 import br.ufrpe.moview.negocio.ControladorSessao;
@@ -16,7 +17,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class TelaPesquisaFilmeController implements Initializable {
@@ -30,13 +30,10 @@ public class TelaPesquisaFilmeController implements Initializable {
     @FXML private TableColumn<Filme, String> genero;
     @FXML private TableColumn<Filme, LocalDate> dataLancamento;
     @FXML private final ObservableList<Filme> items = FXCollections.observableArrayList();
-    @FXML private PropertyValueFactory<Filme, ?> propriedadeValorFabrica;
 
     ControladorCenas controladorCenas = ControladorCenas.getInstance();
     ControladorSessao sessao = ControladorSessao.getInstancia();
     ControladorFilme controladorFilme = ControladorFilme.getInstancia();
-
-    Filme filmeEscolhido;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -89,7 +86,7 @@ public class TelaPesquisaFilmeController implements Initializable {
         listaFilmesBuscados.setItems(null);
         String tipoUsuario = sessao.getUsuarioOnline().getTipo().toString();
 
-        if(Objects.equals(tipoUsuario, "ADMIN")) {
+        if(tipoUsuario == TipoDeConta.ADMIN.toString()) {
             controladorCenas.TrocarTelaPrincipalAdm(event);
         }
         else{

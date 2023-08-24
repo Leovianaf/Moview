@@ -1,5 +1,6 @@
 package br.ufrpe.moview.gui;
 
+import br.ufrpe.moview.beans.TipoDeConta;
 import br.ufrpe.moview.exception.CamposNaoPreenchidosException;
 import br.ufrpe.moview.exception.ObjetoInvalidoException;
 import br.ufrpe.moview.exception.SenhaIncorretaException;
@@ -12,7 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class TelaLoginController {
     // Atributos elementos gráficos
@@ -58,7 +58,7 @@ public class TelaLoginController {
                 if (controladorUsuario.login(login, senha)) {
                     String tipoUsuario = sessao.getUsuarioOnline().getTipo().toString();
 
-                    if (Objects.equals(tipoUsuario, "ADMIN")) {
+                    if (tipoUsuario == TipoDeConta.ADMIN.toString()) {
                         controladorCenas.TrocarTelaPrincipalAdm(event);
                     } else {
                         controladorCenas.TrocarTelaPrincipal(event);
@@ -68,10 +68,12 @@ public class TelaLoginController {
                 }
             } catch (SenhaIncorretaException e) {
                 lblErro.setText("Erro: " + e.getMessage());
+            } catch (ObjetoInvalidoException e) {
+                lblErro.setText("Erro: O Usuário não está cadastrado");
             }
         } catch (CamposNaoPreenchidosException e) {
             this.lblErro.setText("Erro: " + e.getMessage());
-        } catch (IOException | ObjetoInvalidoException e) {
+        } catch (IOException e) {
             // Tratar outras exceções aqui, se necessário
         }
     }

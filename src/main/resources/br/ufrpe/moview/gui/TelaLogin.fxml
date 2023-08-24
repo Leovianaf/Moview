@@ -57,7 +57,7 @@
             <Font name="Lucida Sans Unicode" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="txtLogin" focusTraversable="false" layoutX="540.0" layoutY="250.0" prefHeight="25.0" prefWidth="170.0" promptText="Login">
+      <TextField fx:id="txtLogin" layoutX="540.0" layoutY="250.0" prefHeight="25.0" prefWidth="170.0" promptText="Login">
          <font>
             <Font size="14.0" />
          </font>
@@ -65,7 +65,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <PasswordField fx:id="txtSenha" focusTraversable="false" layoutX="540.0" layoutY="300.0" prefHeight="25.0" prefWidth="170.0" promptText="Senha">
+      <PasswordField fx:id="txtSenha" layoutX="540.0" layoutY="300.0" prefHeight="25.0" prefWidth="170.0" promptText="Senha">
          <font>
             <Font size="14.0" />
          </font>

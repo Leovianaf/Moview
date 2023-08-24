@@ -23,7 +23,7 @@ public class Main extends Application {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TelaCadastro.fxml")));
             Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("style/style.css").toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style/style.css")).toExternalForm());
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
