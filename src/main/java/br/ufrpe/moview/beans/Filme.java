@@ -1,6 +1,8 @@
 package br.ufrpe.moview.beans;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Filme {
     // Atributos
@@ -8,8 +10,14 @@ public class Filme {
     private Genero genero;
     private String sinopse;
     private LocalDate dataDeLancamento;
-    private double notaCriticos;
     private double notaPublico;
+    private double notaCriticos;
+
+    // Lista de avaliações do público
+    private List<Avaliacao> avaliacoesPublico = new ArrayList<>();
+
+    // Lista de avaliações dos críticos
+    private List<Avaliacao> avaliacoesCriticos = new ArrayList<>();
 
     // Construtor
     public Filme(String nome, Genero genero, String sinopse, LocalDate dataDeLancamento) {
@@ -66,5 +74,21 @@ public class Filme {
 
     public void setNotaPublico(double notaPublico) {
         this.notaPublico = notaPublico;
+    }
+
+    public List<Avaliacao> getAvaliacoesPublico() {
+        return avaliacoesPublico;
+    }
+
+    public void setAvaliacoesPublico(List<Avaliacao> avaliacoesPublico) {
+        this.avaliacoesPublico = avaliacoesPublico;
+    }
+
+    public List<Avaliacao> getAvaliacoesCriticos() {
+        return avaliacoesCriticos;
+    }
+
+    public void setAvaliacoesCriticos(List<Avaliacao> avaliacoesCriticos) {
+        this.avaliacoesCriticos = avaliacoesCriticos;
     }
 }

@@ -1,5 +1,6 @@
 package br.ufrpe.moview.negocio;
 
+import br.ufrpe.moview.beans.Avaliacao;
 import br.ufrpe.moview.beans.Filme;
 import br.ufrpe.moview.beans.Genero;
 import br.ufrpe.moview.dados.IRepositorioGenerico;
@@ -101,6 +102,34 @@ public class ControladorFilme {
         }
         else {
             throw new ObjetoInvalidoException();
+        }
+    }
+
+    // Método para calcular a média das notas
+    public void calcularMediaNotas(Filme filme) {
+        List<Avaliacao> avaliacoesPublico = filme.getAvaliacoesPublico();
+        List<Avaliacao> avaliacoesCriticos = filme.getAvaliacoesCriticos();
+
+        // Calcular média das notas do público
+        if (avaliacoesPublico.isEmpty()) {
+            filme.setNotaPublico(0.0); // Defina um valor padrão para quando não houver avaliações
+        } else {
+            double totalNotas = 0.0;
+            for (Avaliacao avaliacao : avaliacoesPublico) {
+                totalNotas += avaliacao.getNota();
+            }
+            filme.setNotaPublico(totalNotas / avaliacoesPublico.size());
+        }
+
+        // Calcular média das notas dos críticos
+        if (avaliacoesCriticos.isEmpty()) {
+            filme.setNotaCriticos(0.0); // Defina um valor padrão para quando não houver avaliações
+        } else {
+            double totalNotas = 0.0;
+            for (Avaliacao avaliacao : avaliacoesCriticos) {
+                totalNotas += avaliacao.getNota();
+            }
+            filme.setNotaCriticos(totalNotas / avaliacoesCriticos.size());
         }
     }
 

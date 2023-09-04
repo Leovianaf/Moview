@@ -6,9 +6,7 @@ module br.ufrpe.moview {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens br.ufrpe.moview to javafx.fxml;
     opens br.ufrpe.moview.gui to javafx.fxml;
     opens br.ufrpe.moview.beans to javafx.base;
-    exports br.ufrpe.moview;
     exports br.ufrpe.moview.gui;
 }

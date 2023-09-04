@@ -2,6 +2,7 @@ package br.ufrpe.moview.negocio;
 
 import br.ufrpe.moview.beans.Avaliacao;
 import br.ufrpe.moview.beans.Filme;
+import br.ufrpe.moview.beans.TipoDeConta;
 import br.ufrpe.moview.beans.Usuario;
 import br.ufrpe.moview.dados.IRepositorioGenerico;
 import br.ufrpe.moview.dados.RepositorioGenerico;
@@ -14,6 +15,7 @@ import java.util.List;
 public class ControladorAvaliacao {
     private final IRepositorioGenerico<Avaliacao> repositorioAvaliacoes;
     private static ControladorAvaliacao instancia;
+    ControladorFilme controladorFilme = ControladorFilme.getInstancia();
 
     // Controlador
     public ControladorAvaliacao() {
@@ -32,6 +34,19 @@ public class ControladorAvaliacao {
     public void adicionarAvaliacao(Avaliacao avaliacao) throws ObjetoJaExisteException, ObjetoInvalidoException {
         if (avaliacao != null){
             if(avaliacao.getUsuario() != null && avaliacao.getFilme() != null && avaliacao.getComentario() != null && avaliacao.getNota() != 0 && avaliacao.getDataAvaliacao() != null){
+                Filme filme = avaliacao.getFilme();
+                for(Filme f : controladorFilme.listarFilmes()){
+                    if (f.equals(filme)){
+                        if(avaliacao.getUsuario().equals(TipoDeConta.PADRAO) || avaliacao.getUsuario().equals(TipoDeConta.ADMIN) ){
+                            f.getAvaliacoesPublico().add(avaliacao);
+                            controladorFilme.calcularMediaNotas(f);
+                        }
+                        else if(avaliacao.getUsuario().equals(TipoDeConta.CRITICO)){
+                            f.getAvaliacoesCriticos().add(avaliacao);
+                            controladorFilme.calcularMediaNotas(f);
+                        }
+                    }
+                }
                 repositorioAvaliacoes.adicionar(avaliacao);
             }
         }
