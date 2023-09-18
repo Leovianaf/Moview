@@ -171,8 +171,8 @@ public class ControladorCenas {
         stage.show();
     }
 
-    public void TrocarPesquisaUsuariop(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TelaPesquisaUsuario.fxml")));
+    public void TrocarTelaMinhasAvaliacoes(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TelaMinhasAvaliacoes.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style/style.css")).toExternalForm());

@@ -42,6 +42,10 @@ public class Main extends Application {
         admin.setTipo(TipoDeConta.ADMIN);
         controladorUsuario.adicionarUsuario(admin);
 
+        Usuario padrao = new Usuario("Padrão", "p", "p");
+        padrao.setTipo(TipoDeConta.PADRAO);
+        controladorUsuario.adicionarUsuario(padrao);
+
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("d/MM/yyyy");
         Filme harrypotter = new Filme("Harry Potter", Genero.FANTASIA, "Menino bruxo brabo", LocalDate.parse("23/11/2001",formato));
         Filme interstellar = new Filme("Interstellar", Genero.FICCAO_CIENTIFICA, "Filme ruim no espaço", LocalDate.parse("6/11/2014",formato));
